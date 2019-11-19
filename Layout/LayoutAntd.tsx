@@ -6,13 +6,17 @@ const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
 
 interface LayoutProps {
-  footer?: ReactNode;
 }
 interface LayoutState {}
 
 export default class LayoutAntd extends Component<LayoutProps, LayoutState> {
+
+  constructor(props: LayoutProps){
+    super(props)
+  }
+
+
   render() {
-    const { footer } = this.props;
 
     return (
       <Layout>
@@ -92,7 +96,7 @@ export default class LayoutAntd extends Component<LayoutProps, LayoutState> {
             </Content>
           </Layout>
         </Content>
-        <Footer style={{ textAlign: "center" }}>{footer}</Footer>
+        <Footer style={{ textAlign: "center" }}></Footer>
       </Layout>
     );
   }

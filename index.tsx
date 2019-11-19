@@ -19,7 +19,7 @@ class App extends Component<AppProps, AppState> {
   render() {
     return (
       <div>
-        <LayoutAntd />
+        <LayoutAntd footer={<div></div>} />
       </div>
     );
   }
